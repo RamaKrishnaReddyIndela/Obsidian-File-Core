@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Lock, Unlock, ShieldAlert, Search, History, Wrench, Cpu, Brain, MessageCircle, Key, Users } from "lucide-react";
+import { Lock, Unlock, ShieldAlert, Search, History, Wrench, Cpu, Brain, Users } from "lucide-react";
 import api from "../../utils/axios";
 import UploadFile from "../Files/UploadFile";
 import FileList from "../Files/FileList";
@@ -45,7 +45,7 @@ const Dashboard = () => {
 
     fetchProfile();
     fetchStats();
-  }, [navigate]);
+  }, [navigate, setLang]);
 
   const refreshFileList = () => setRefreshFiles((prev) => !prev);
 
@@ -59,10 +59,6 @@ const Dashboard = () => {
     return () => { document.body.style.overflow = ''; };
   }, [drawerOpen]);
 
-  const secretsCount = (st) => {
-    // If backend provides stats, you can map it; otherwise return 0 gracefully
-    return st?.secrets || 0;
-  };
 
   if (!user) return <div className="p-6">🔄 Loading...</div>;
 

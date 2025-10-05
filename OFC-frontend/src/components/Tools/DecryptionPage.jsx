@@ -5,21 +5,16 @@ import {
   Upload,
   Download,
   Key,
-  Shield,
   FileText,
   Hash,
-  Clock,
-  Info,
   CheckCircle,
-  AlertCircle,
   Copy,
   Eye,
   EyeOff,
-  Settings,
-  Zap,
-  RefreshCw,
   Search,
-  AlertTriangle
+  RefreshCw,
+  Zap,
+  Info
 } from 'lucide-react';
 import toast from 'react-hot-toast';
 import { useI18n } from '../../i18n';
@@ -35,7 +30,6 @@ const DecryptionPage = () => {
   const [iv, setIv] = useState('');
   const [algorithm, setAlgorithm] = useState('AES-256-CBC');
   const [showKey, setShowKey] = useState(false);
-  const [showAdvanced, setShowAdvanced] = useState(false);
   const [fileAnalysis, setFileAnalysis] = useState(null);
   const encryptedFileRef = useRef(null);
   const keyFileRef = useRef(null);

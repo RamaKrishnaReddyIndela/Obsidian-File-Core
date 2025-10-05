@@ -13,13 +13,10 @@ import {
   Files, 
   Database, 
   TrendingUp,
-  Calendar,
-  Clock,
   HardDrive,
   Lock,
   Unlock,
   Eye,
-  AlertTriangle,
   CheckCircle,
   Edit,
   Save,
@@ -27,18 +24,15 @@ import {
   ArrowLeft,
   Key,
   Hash,
-  Globe,
   Briefcase
 } from 'lucide-react';
 import { useTheme } from '../../contexts/ThemeContext';
-import { useI18n } from '../../i18n';
 import ChangePasswordModal from './ChangePasswordModal';
 
 const UserProfile = () => {
   const { userId } = useParams();
   const navigate = useNavigate();
   const { isDark } = useTheme();
-  const { t } = useI18n();
   const [profile, setProfile] = useState(null);
   const [loading, setLoading] = useState(true);
   const [editMode, setEditMode] = useState(false);
@@ -46,11 +40,7 @@ const UserProfile = () => {
   const [activeTab, setActiveTab] = useState('overview');
   const [showChangePasswordModal, setShowChangePasswordModal] = useState(false);
 
-  useEffect(() => {
-    fetchUserProfile();
-  }, [userId]);
-
-  const fetchUserProfile = async () => {
+const fetchUserProfile = React.useCallback(async () => {
     try {
       setLoading(true);
       const endpoint = userId ? `/user-profile/profile/${userId}` : '/user-profile/profile';
@@ -75,7 +65,11 @@ const UserProfile = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [userId, navigate]);
+
+  useEffect(() => {
+    fetchUserProfile();
+  }, [fetchUserProfile]);
 
   const handleUpdateProfile = async () => {
     try {

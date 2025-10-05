@@ -34,7 +34,7 @@ const ChangePasswordModal = ({ isOpen, onClose, onSuccess }) => {
       uppercase: /[A-Z]/.test(password),
       lowercase: /[a-z]/.test(password),
       number: /\d/.test(password),
-      special: /[!@#$%^&*()_+\-=\[\]{}|;:,.<>?]/.test(password)
+      special: /[^A-Za-z0-9\s]/.test(password)
     };
 
     const score = Object.values(requirements).reduce((acc, req) => acc + (req ? 1 : 0), 0);

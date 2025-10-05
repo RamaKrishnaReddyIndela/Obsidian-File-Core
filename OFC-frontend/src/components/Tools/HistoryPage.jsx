@@ -4,21 +4,17 @@ import axios from '../../utils/axios';
 import {
   History,
   Search,
-  Filter,
   Download,
   Eye,
-  Trash2,
   Lock,
   Unlock,
   Shield,
   Brain,
   FileText,
   Clock,
-  Calendar,
   Hash,
   ArrowUpDown,
   RefreshCw,
-  BarChart3,
   Info,
   CheckCircle,
   AlertTriangle,
@@ -193,6 +189,8 @@ const HistoryPage = () => {
           break;
         case 'year':
           filterDate.setFullYear(now.getFullYear() - 1);
+          break;
+        default:
           break;
       }
       

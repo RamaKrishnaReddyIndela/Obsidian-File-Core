@@ -9,9 +9,7 @@ import {
   Eye,
   EyeOff,
   Download,
-  Upload,
   Clipboard,
-  Check,
   RefreshCw,
   Calculator,
   Lock,
@@ -33,7 +31,6 @@ const OtherTools = () => {
   const [hashType, setHashType] = useState('SHA-256');
   const [keyLength, setKeyLength] = useState(32);
   const [includeSymbols, setIncludeSymbols] = useState(true);
-  const [copied, setCopied] = useState('');
   const [stegoImage, setStegoImage] = useState(null);
   const [stegoText, setStegoText] = useState('');
   const [stegoMode, setStegoMode] = useState('hide');
@@ -548,7 +545,6 @@ const OtherTools = () => {
         } else {
           // Extract text from image
           let extractedBytes = [];
-          let byteIndex = 0;
           let bitIndex = 0;
           let currentByte = 0;
           
@@ -562,7 +558,6 @@ const OtherTools = () => {
               extractedBytes.push(currentByte);
               currentByte = 0;
               bitIndex = 0;
-              byteIndex++;
             }
           }
           
@@ -666,7 +661,7 @@ const OtherTools = () => {
                 onClick={() => copyToClipboard(generatedKey, 'key')}
                 className="flex items-center gap-2 px-3 py-1 bg-green-600 text-white text-sm rounded-lg hover:bg-green-700 transition-colors"
               >
-                {copied === 'key' ? <Check className="w-4 h-4" /> : <Clipboard className="w-4 h-4" />}
+                <Clipboard className="w-4 h-4" />
                 Copy
               </button>
             </div>
@@ -777,7 +772,7 @@ const OtherTools = () => {
                 onClick={() => copyToClipboard(hashResult, 'hash')}
                 className="flex items-center gap-2 px-3 py-1 bg-green-600 text-white text-sm rounded-lg hover:bg-green-700 transition-colors"
               >
-                {copied === 'hash' ? <Check className="w-4 h-4" /> : <Clipboard className="w-4 h-4" />}
+                <Clipboard className="w-4 h-4" />
                 Copy
               </button>
             </div>

@@ -1,35 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from '../../utils/axios';
 import toast from 'react-hot-toast';
 import { 
-  Users, 
-  Folder, 
-  FolderOpen, 
-  File, 
-  User, 
+  Users,
   ArrowLeft,
   Search,
-  Filter,
-  Download,
-  Eye,
-  Trash2,
   Shield,
   AlertTriangle,
   CheckCircle,
-  Calendar,
   HardDrive,
-  BarChart3,
-  TrendingUp,
   Database,
-  Lock,
-  Unlock,
   FileText,
   Image,
   Video,
   Music,
   Archive,
-  FileCode
+  FileCode,
+  File
 } from 'lucide-react';
 import { useTheme } from '../../contexts/ThemeContext';
 
@@ -57,7 +45,7 @@ const UserFilesView = () => {
   const [summary, setSummary] = useState(null);
 
   // Fetch users with files
-  const fetchUsersWithFiles = async () => {
+const fetchUsersWithFiles = useCallback(async () => {
     try {
       setLoading(true);
       const response = await axios.get('/user-files/users');
@@ -78,10 +66,10 @@ const UserFilesView = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [navigate]);
 
   // Fetch files for selected user
-  const fetchUserFiles = async (userId, page = 1) => {
+  const fetchUserFiles = useCallback(async (userId, page = 1) => {
     try {
       setLoading(true);
       const params = new URLSearchParams({
@@ -105,7 +93,7 @@ const UserFilesView = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [searchTerm, filters]);
 
   // Handle user selection
   const handleUserClick = (user) => {
@@ -156,7 +144,7 @@ const UserFilesView = () => {
   // Load initial data
   useEffect(() => {
     fetchUsersWithFiles();
-  }, []);
+  }, [fetchUsersWithFiles]);
 
   // Handle search and filters for files view
   useEffect(() => {
@@ -167,7 +155,7 @@ const UserFilesView = () => {
 
       return () => clearTimeout(delayedSearch);
     }
-  }, [searchTerm, filters, selectedUser, view]);
+  }, [searchTerm, filters, selectedUser, view, fetchUserFiles]);
 
   if (loading && view === 'users') {
     return (

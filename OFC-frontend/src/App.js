@@ -51,7 +51,7 @@ function App() {
         }
       />
 
-      /* Profile Page (inside Dashboard) */
+      {/* Profile Page (inside Dashboard) */}
       <Route
         path="/dashboard/profile"
         element={

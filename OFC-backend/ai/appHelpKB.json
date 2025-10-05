@@ -1,0 +1,658 @@
+[
+  {
+    "q": "what is obsidian file core|what is obsidiancore|what is forticrypt",
+    "a": "Obsidian File Core is an enterprise-grade file encryption and security management platform with AI-powered threat detection, blockchain integrity verification, and 8 comprehensive security tools."
+  },
+  {
+    "q": "what tools are available|what are the tools|list tools|features",
+    "a": "Available tools: 🔒 Advanced Encryption (9 algorithms), 🔓 Intelligent Decryption, 🤖 AI Analyzer, 🔬 ML Scanner, 🛡️ Malware Scanner, 👁️ Sensitivity Finder, 📊 History Tracker, 🔧 Other Tools (key generator, steganography, secure notes), and Secret Vault."
+  },
+  {
+    "q": "how do i upload a file|upload file|encrypt file|how to upload and encrypt",
+    "a": "Go to Dashboard → Encrypt Tool. Drag & drop your file or click to browse. Choose from 9 encryption algorithms (AES-256-CBC recommended). Select auto-generate key or provide custom key. Click 'Encrypt File' and download both encrypted file and key file. Your file is encrypted with military-grade security!"
+  },
+  {
+    "q": "list my files|see encrypted files|my encrypted files|file list",
+    "a": "Go to Dashboard → History to see all your encrypted files with detailed metadata. You can also check the main Dashboard for file statistics, or use the File Management section in any tool to view, download, or delete your files."
+  },
+  {
+    "q": "download decrypt file|how to decrypt|decrypt file",
+    "a": "Go to Dashboard → Decrypt Tool. Upload your encrypted (.enc) file and key file (JSON format), or manually enter the hex key and IV. The system auto-detects the encryption algorithm. Verify with OTP if required, then download your decrypted file."
+  },
+  {
+    "q": "generate download link|secure download link|share file",
+    "a": "In any file list, click the 'Generate Link' button next to your file. This creates a temporary, secure download URL that expires after a set time. Share this link safely - it requires OTP verification for access."
+  },
+  {
+    "q": "same file name|duplicate names|file name conflict",
+    "a": "Obsidian File Core automatically handles duplicate names by adding timestamps (e.g., 'document_1697123456.pdf'). Each file gets a unique encrypted filename on the server, so your original names are preserved without conflicts."
+  },
+  {
+    "q": "verify download otp|otp verification|how to verify otp",
+    "a": "When downloading sensitive files, you'll be prompted for OTP. Check your registered email for a 6-digit code. Enter it in the verification popup. The OTP is valid for 5 minutes and ensures only you can access your files."
+  },
+  {
+    "q": "resend otp|didn't receive otp|otp not received",
+    "a": "Click 'Resend OTP' in the verification popup, or go to Profile → Security Settings → Resend OTP. Check your spam folder. If issues persist, ensure your email is correct in Profile settings."
+  },
+  {
+    "q": "someone else otp|otp security|unauthorized otp",
+    "a": "Each OTP is tied to your account and IP address. If someone tries to use your OTP, the system blocks it and logs the attempt. You'll get an email notification about suspicious activity. Change your password immediately if this happens."
+  },
+  {
+    "q": "otp valid time|otp expiration|how long otp valid",
+    "a": "OTPs are valid for 5 minutes from generation. After expiration, you must request a new one. This short window ensures maximum security while giving you time to complete verification."
+  },
+  {
+    "q": "otp storage|otp stored|otp database",
+    "a": "OTPs are immediately deleted from the database after successful verification or expiration. They're never stored permanently. Only a hashed version exists temporarily in memory for validation."
+  },
+  {
+    "q": "how ai detect sensitive|ai sensitivity detection|sensitive content detection",
+    "a": "Our AI scans file content for patterns like credit cards, SSNs, emails, phone numbers, API keys, passwords, and confidential keywords. It uses machine learning models trained on sensitive data patterns with 95%+ accuracy."
+  },
+  {
+    "q": "sensitive file types|what files flagged sensitive|types sensitive files",
+    "a": "Files with: Personal data (SSN, passport, ID numbers), Financial info (credit cards, bank accounts), Authentication data (passwords, API keys, tokens), Business data (contracts, confidential documents), Medical records, and Legal documents are flagged as sensitive."
+  },
+  {
+    "q": "override ai warning|ignore sensitivity warning|bypass ai",
+    "a": "Yes! AI warnings are advisory only. You can click 'Proceed Anyway' on sensitivity warnings. However, we recommend reviewing the detected patterns first. Your files will be encrypted regardless of sensitivity level."
+  },
+  {
+    "q": "malware scan|virus scan|malware detection",
+    "a": "Yes! Obsidian File Core has a dedicated Malware Scanner using ML models. It detects suspicious files, packed executables, known malware signatures, and high-entropy files. Go to Dashboard → Malware Scanner or use the AI Analyzer for combined analysis."
+  },
+  {
+    "q": "blockchain every file|blockchain usage|blockchain tracking",
+    "a": "Yes! Every file upload, encryption, decryption, and deletion is recorded on our private blockchain. This creates an immutable audit trail that cannot be tampered with, ensuring complete transparency and integrity verification."
+  },
+  {
+    "q": "hide files in image|steganography|hide files image",
+    "a": "Go to Dashboard → Other Tools → Steganography tab. Upload an image (PNG/JPG), enter your secret message, and click 'Hide Text'. Download the modified image - it looks identical but contains your hidden data using LSB (Least Significant Bit) technique."
+  },
+  {
+    "q": "recover hidden files|extract hidden text|get hidden data",
+    "a": "In the Steganography tool, switch to 'Extract' mode. Upload the image containing hidden data and click 'Extract Text'. The hidden message will be revealed. Only works on images that had data hidden using Obsidian File Core's steganography."
+  },
+  {
+    "q": "secret folder|what is secret folder|secret vault",
+    "a": "The Secret Vault (accessible via Chat widget → Vault tab) stores sensitive items like credit cards, passwords, credentials, and notes. It uses AES-256-GCM encryption with a master key and requires your personal vault passphrase for access."
+  },
+  {
+    "q": "secret folder encryption|vault encryption different",
+    "a": "Yes! Secret Vault uses AES-256-GCM (authenticated encryption) with a server-side master key combined with your personal passphrase. This provides stronger protection than regular file encryption and prevents tampering."
+  },
+  {
+    "q": "share vault files|share secret folder",
+    "a": "Vault items cannot be directly shared for security. However, you can copy the decrypted content and share it through regular encryption tools, or export vault data and share the encrypted export file with someone who has the vault password."
+  },
+  {
+    "q": "change password|update password|password reset|how can i change password|how do i change password|change my password|update my password",
+    "a": "Go to Profile → Security Settings, or use Forgot Password on login page. Enter your email, receive OTP, verify it, and set a new password. Your encrypted files remain accessible with the new password."
+  },
+  {
+    "q": "logout all devices|logout everywhere|revoke sessions",
+    "a": "Go to Profile → Security Settings → Active Sessions → 'Logout All Devices'. This invalidates all JWT tokens and forces re-login on all devices. Useful if you suspect unauthorized access."
+  },
+  {
+    "q": "mobile support|works on mobile|mobile app",
+    "a": "Obsidian File Core is fully responsive and works on mobile browsers (iOS Safari, Android Chrome). While there's no native app yet, the web interface adapts perfectly to mobile screens with touch-friendly controls."
+  },
+  {
+    "q": "update profile name|change name|edit profile",
+    "a": "Go to Dashboard → Profile (top right) → Edit Profile. You can update your full name, email, phone, address, company information, and preferences. Changes are saved immediately and reflected across the platform."
+  },
+  {
+    "q": "forgot password|forgot my password|password recovery|can't remember password|lost password",
+    "a": "On the login page, click 'Forgot Password'. Enter your registered email address. You'll receive a 6-digit OTP via email. Enter the OTP and create a new password. Your encrypted files and vault remain secure."
+  },
+  {
+    "q": "encryption algorithms|types of encryption|which algorithm choose",
+    "a": "Available algorithms: AES-256-CBC (recommended, industry standard), AES-192-CBC, AES-128-CBC (faster), AES-256-GCM (authenticated), ChaCha20-Poly1305 (modern), Blowfish (legacy), Twofish, DES, 3DES. For maximum security, use AES-256-CBC or AES-256-GCM."
+  },
+  {
+    "q": "file size limit|maximum file size|upload limit",
+    "a": "Standard file upload limit is 10MB for ML processing. For regular encryption, larger files are supported. Enterprise users can request higher limits. The system handles files efficiently with streaming for large files."
+  },
+  {
+    "q": "history tracking|activity log|audit trail",
+    "a": "Go to Dashboard → History to see all activities: encryptions, decryptions, scans, uploads, downloads. Filter by date, type, or search by filename. Export detailed reports in JSON format. Everything is tracked on the blockchain."
+  },
+  {
+    "q": "key generator|generate keys|secure keys",
+    "a": "Go to Other Tools → Key Generator. Choose length (16-256 characters), select character types, and generate cryptographically secure keys. The tool shows entropy levels and allows one-click copying to clipboard."
+  },
+  {
+    "q": "hash calculator|calculate hash|file hash",
+    "a": "Other Tools → Hash Calculator supports SHA-1, SHA-256, SHA-384, and SHA-512. Upload a file or enter text to get cryptographic hashes. Useful for file integrity verification and digital forensics."
+  },
+  {
+    "q": "secure notes|encrypted notes|private notes",
+    "a": "Other Tools → Secure Notes lets you encrypt text with a password using XOR encryption. The encryption happens in your browser - the server never sees your original text. Perfect for private messages and confidential notes."
+  },
+  {
+    "q": "dashboard statistics|file stats|usage stats",
+    "a": "The main Dashboard shows: Total Files, Encrypted Files, Decrypted Files, Threats Detected, Sensitive Files, History Records, and Available Tools. These update in real-time as you use the platform."
+  },
+  {
+    "q": "enterprise features|business use|team features",
+    "a": "Obsidian File Core includes enterprise features: Multi-user support, Role-based access, Comprehensive audit trails, Blockchain verification, Advanced reporting, API integration, and Custom deployment options."
+  },
+  {
+    "q": "api documentation|api endpoints|developer api",
+    "a": "Full API documentation includes endpoints for authentication, file operations, encryption/decryption, AI/ML analysis, vault management, and user profiles. All endpoints use JWT authentication and follow RESTful conventions."
+  },
+  {
+    "q": "data privacy|privacy policy|data handling",
+    "a": "Obsidian File Core uses zero-knowledge architecture - we never see your encryption keys or file contents. All sensitive data is encrypted client-side. Logs contain only metadata. Your privacy is our top priority."
+  },
+  {
+    "q": "support|help|contact|technical support",
+    "a": "For help: Use this AI chat assistant, check the comprehensive documentation, visit Dashboard → History for detailed logs, or contact your system administrator. The platform includes extensive help text and tooltips."
+  },
+  {
+    "q": "encrypt multiple files|batch encryption|multiple files at once",
+    "a": "Currently, Obsidian File Core processes one file at a time for optimal security and resource management. However, you can quickly encrypt multiple files by using the dashboard repeatedly, or consider using the API for batch operations in enterprise environments."
+  },
+  {
+    "q": "original filename after encryption|does forticrypt change filename|encrypted filename",
+    "a": "Yes, FortiCrypt changes the filename for security. Original files get encrypted with unique identifiers, but the original filename is preserved in metadata. When you decrypt, you get back your original filename automatically."
+  },
+  {
+    "q": "encrypt 1gb file time|large file encryption time|encryption speed",
+    "a": "A 1GB file typically takes 2-5 minutes to encrypt depending on your connection speed and chosen algorithm. AES-128 is fastest, while AES-256-GCM provides maximum security but takes longer. Progress indicators show real-time status."
+  },
+  {
+    "q": "pause resume encryption|stop encryption process|resume file encryption",
+    "a": "Currently, encryption processes cannot be paused and resumed. If interrupted, you'll need to restart the encryption. For large files, ensure stable internet connection. We're considering adding pause/resume functionality in future updates."
+  },
+  {
+    "q": "unique key per file|shared encryption key|key per file",
+    "a": "Each file gets a unique encryption key and IV (Initialization Vector) for maximum security. Keys are never reused between files. This means even if one key is compromised, other files remain completely secure."
+  },
+  {
+    "q": "lose decryption key|lost encryption key|key recovery",
+    "a": "If you lose the decryption key, your file cannot be recovered - this is by design for security. Always backup your key files safely. Consider using the Secret Vault to store important keys, or keep multiple copies in secure locations."
+  },
+  {
+    "q": "download without decrypting|download encrypted file|get encrypted file",
+    "a": "Yes! You can download encrypted files (.enc format) without decrypting them from the History page or any file list. This lets you store encrypted files locally or transfer them securely while keeping them encrypted."
+  },
+  {
+    "q": "file corruption check|decryption integrity|corrupted decrypted file",
+    "a": "FortiCrypt uses authenticated encryption (GCM mode) and integrity checks during decryption. If a file is corrupted, decryption will fail with an error message. Blockchain logging also verifies file integrity throughout its lifecycle."
+  },
+  {
+    "q": "partial decryption|decrypt part of file|section decryption",
+    "a": "Partial decryption is not currently supported. Encryption algorithms require the entire file to decrypt properly. However, for large archives, consider encrypting individual files separately for selective access."
+  },
+  {
+    "q": "open decrypted files directly|view files in dashboard|direct file opening",
+    "a": "For security, files must be downloaded to open. The dashboard doesn't open files directly in browser to prevent security vulnerabilities. After decryption and download, you can open files with your local applications normally."
+  },
+  {
+    "q": "otp reuse|same otp multiple times|otp multiple use",
+    "a": "Each OTP can only be used once and expires after 5 minutes. Once verified or expired, you must generate a new OTP. This one-time-use policy ensures maximum security for your sensitive operations."
+  },
+  {
+    "q": "otp email spam|otp in spam folder|otp email issues",
+    "a": "Check your spam/junk folder first. Add our system email to your contacts or safe senders list. If OTP emails consistently go to spam, contact your email admin to whitelist our domain, or update your email in profile settings."
+  },
+  {
+    "q": "share otp with someone|otp sharing|give otp to others",
+    "a": "Never share your OTP! Each OTP is tied to your specific account and session. Sharing OTPs compromises security and violates best practices. If someone else needs access, they should have their own account with proper permissions."
+  },
+  {
+    "q": "secure link validity|download link expiration|link expiry time",
+    "a": "Secure download links are valid for 24 hours by default and expire after first use for security. Links require OTP verification before download. This ensures temporary, secure sharing while preventing unauthorized long-term access."
+  },
+  {
+    "q": "revoke secure link|cancel download link|invalidate shared link",
+    "a": "Yes! In the file list, click the '🔗' icon next to any file to manage its secure links. You can view active links, revoke specific links, or disable all links for that file. Revoked links become immediately invalid."
+  },
+  {
+    "q": "detect ransomware files|ransomware detection|malware in files",
+    "a": "Yes! FortiCrypt's AI-powered malware scanner detects ransomware signatures, suspicious file patterns, high entropy indicating encryption, and known malware families. Files are automatically scanned and flagged before encryption for your protection."
+  },
+  {
+    "q": "ai sensitive vs normal|sensitivity detection logic|how ai determines sensitive",
+    "a": "AI analyzes file content for patterns like SSNs, credit cards, API keys, passwords, medical records, legal terms, and confidential keywords. Machine learning models trained on millions of documents achieve 95%+ accuracy in distinguishing sensitive from normal content."
+  },
+  {
+    "q": "train ai custom rules|organization sensitivity rules|custom ai training",
+    "a": "Enterprise customers can customize sensitivity rules through admin settings. Add custom keywords, patterns, and document types specific to your organization. The AI learns from your feedback to improve detection accuracy for your specific use case."
+  },
+  {
+    "q": "ai false positive|wrong sensitivity detection|incorrect ai flag",
+    "a": "If AI incorrectly flags a file, click 'Report Incorrect Detection' in the sensitivity warning. This helps improve the model. You can always proceed with 'Continue Anyway' - AI warnings are advisory only and don't block encryption."
+  },
+  {
+    "q": "blockchain logging mandatory|optional blockchain|disable blockchain",
+    "a": "Blockchain logging is mandatory for security and compliance. All file operations are recorded on our private blockchain to create an immutable audit trail. This cannot be disabled as it's core to FortiCrypt's integrity verification system."
+  },
+  {
+    "q": "hide pdf in image|steganography pdf|pdf inside image",
+    "a": "Current steganography feature hides text messages only, not files like PDFs. However, you can convert PDF content to text, hide it in an image, then recreate the document after extraction. File-in-image steganography is planned for future releases."
+  },
+  {
+    "q": "steganography image formats|supported image types|hide files image format",
+    "a": "Steganography currently supports PNG and JPEG formats. PNG is recommended for better quality retention after hiding data. The system uses LSB (Least Significant Bit) technique which works best with lossless formats like PNG."
+  },
+  {
+    "q": "detect hidden files external tools|steganography detection|find hidden data",
+    "a": "Advanced steganography analysis tools might detect hidden data by analyzing bit patterns and entropy. However, FortiCrypt's LSB technique is subtle and hard to detect casually. For maximum security, use multiple layers of protection."
+  },
+  {
+    "q": "secret folder password protection|vault separate password|secret vault security",
+    "a": "Yes! Secret Vault requires your personal vault passphrase separate from your account password. This provides two-factor security: account login + vault access. Even if someone accesses your account, they can't open your vault without the passphrase."
+  },
+  {
+    "q": "delete secret folder mistake|recover secret vault|vault recovery",
+    "a": "Secret Vault data cannot be recovered if deleted without backup. Always export your vault data regularly through Vault Settings. If accidentally deleted, contact support immediately - recent operations might be recoverable from blockchain logs."
+  },
+  {
+    "q": "team member access levels|user permissions|role based access",
+    "a": "Enterprise accounts support role-based access: Admin (full access), Manager (user management + files), Analyst (view files + reports), User (own files only). Admins can set granular permissions for each team member through the admin panel."
+  },
+  {
+    "q": "multiple device login|simultaneous sessions|login multiple devices",
+    "a": "You can log in to up to 5 devices simultaneously. Each session is tracked in Profile → Security Settings → Active Sessions. Sessions expire after 24 hours of inactivity or can be manually revoked for security."
+  },
+  {
+    "q": "admin see encrypted files|administrator access|admin file access",
+    "a": "No! Administrators cannot see your encrypted file contents due to zero-knowledge architecture. Admins can see metadata (filename, size, dates) and manage users/permissions, but encryption keys remain private to each user."
+  },
+  {
+    "q": "activity logging|user activity log|track user actions",
+    "a": "Yes! FortiCrypt logs all user activities: logins, file operations, security events, and administrative actions. Logs are immutable on blockchain, include timestamps and IP addresses, and are accessible through History and admin reporting."
+  },
+  {
+    "q": "recover account no password email|lost password and email|account recovery",
+    "a": "Without both password and email access, account recovery is impossible by design for security. This prevents unauthorized access even by administrators. Always keep email access secure and consider backup email in profile settings."
+  },
+  {
+    "q": "cloud storage integration|google drive support|cloud backup",
+    "a": "FortiCrypt operates independently for security reasons. However, you can download encrypted files and store them on any cloud service. The encrypted files remain secure even on third-party platforms since keys stay with you."
+  },
+  {
+    "q": "automatic backup|auto backup encrypted files|backup automation",
+    "a": "Enterprise customers can configure automatic backup of encrypted files to designated storage locations through API integration. Individual users can manually download and backup files, or use the export features in History section."
+  },
+  {
+    "q": "api integration|automation api|api support",
+    "a": "Yes! FortiCrypt provides comprehensive REST API for automation: file encryption/decryption, user management, security scanning, vault operations, and reporting. Full API documentation available for enterprise customers with authentication guides."
+  },
+  {
+    "q": "operating system support|supported os|system requirements",
+    "a": "FortiCrypt is web-based and works on any OS with a modern browser: Windows, macOS, Linux, iOS, Android. Requires Chrome 80+, Firefox 75+, Safari 13+, or Edge 80+. No software installation needed - everything runs in your browser."
+  },
+  {
+    "q": "offline mode|work offline|no internet connection",
+    "a": "FortiCrypt requires internet connection for security features like OTP verification, blockchain logging, and AI analysis. However, some tools like Key Generator and Hash Calculator can work offline once loaded. Full offline mode is not available for security reasons."
+  },
+  {
+    "q": "choose encryption algorithm|select algorithm|aes rsa encryption choice",
+    "a": "Yes! FortiCrypt offers 9 encryption algorithms: AES-256-CBC (recommended), AES-192-CBC, AES-128-CBC, AES-256-GCM, ChaCha20-Poly1305, Blowfish, Twofish, DES, and 3DES. You can select your preferred algorithm during the encryption process. AES-256-CBC provides the best balance of security and performance."
+  },
+  {
+    "q": "encryption slow computer|performance during upload|computer slowdown",
+    "a": "Encryption is optimized for performance and uses minimal CPU resources. Modern browsers handle encryption efficiently without noticeable slowdown. Large files may take longer to process, but your computer remains responsive. The process is designed to work in the background without affecting other tasks."
+  },
+  {
+    "q": "upload interrupted|interrupted encryption|failed upload",
+    "a": "If upload is interrupted, the process safely stops and no partial encrypted file is saved. You'll need to restart the encryption from the beginning. For large files, ensure stable internet connection. The system doesn't resume partial uploads to maintain security integrity - each encryption must complete fully."
+  },
+  {
+    "q": "large files over 10gb|huge file support|file size limit 10gb",
+    "a": "FortiCrypt can handle large files over 10GB, but there are practical limits based on browser memory and connection stability. For files over 10GB, consider splitting them or using enterprise-grade infrastructure. Standard users have optimized support up to 1-2GB for best performance."
+  },
+  {
+    "q": "file compression before encryption|compress then encrypt|compression support",
+    "a": "FortiCrypt does not automatically compress files before encryption. Compression reduces security by creating predictable patterns. If you need compression, compress your files manually before uploading. This maintains maximum security while allowing you to reduce file sizes when needed."
+  },
+  {
+    "q": "qr code download|scan qr another device|qr code file access",
+    "a": "Yes! When you generate a secure download link, you can create a QR code that other devices can scan. The QR code contains the secure link and requires OTP verification on the scanning device. Perfect for quickly sharing files between your phone and computer securely."
+  },
+  {
+    "q": "qr code active time|qr code expiration|how long qr valid",
+    "a": "QR codes remain active for the same duration as secure download links - 24 hours by default. Once the QR code is scanned and the file downloaded, both the QR code and link become invalid. You can revoke QR codes early through the file management interface."
+  },
+  {
+    "q": "limit secure link usage|download limit count|link usage restriction",
+    "a": "Yes! When creating secure links, you can set usage limits (1-10 downloads). After the specified number of downloads, the link automatically expires. This prevents unauthorized sharing while allowing controlled access. Each download still requires OTP verification for security."
+  },
+  {
+    "q": "expired secure link access|what happens expired link|access after expiry",
+    "a": "Expired secure links show an 'Access Denied' message with explanation that the link has expired. The system logs the failed attempt for security monitoring. Users are directed to contact the file owner for a new link. No file information is revealed through expired links."
+  },
+  {
+    "q": "sms otp support|otp via sms|text message otp",
+    "a": "Currently, OTP delivery is only supported via email for security and reliability. SMS OTP support is planned for future updates. Email OTP provides better security, detailed logs, and works globally without SMS gateway dependencies. Ensure your email is always accessible for verification."
+  },
+  {
+    "q": "ai detect identity documents|aadhaar ssn passport detection|personal id detection",
+    "a": "Yes! FortiCrypt's AI specifically detects identity documents including Aadhaar numbers (12-digit pattern), SSN (XXX-XX-XXXX format), passport numbers, driver's licenses, and national ID cards. It recognizes both text and image-based identity documents with 95%+ accuracy across multiple formats."
+  },
+  {
+    "q": "ai offline analysis|ai internet requirement|ai without internet",
+    "a": "AI analysis requires internet connection to access our machine learning models and cloud-based processing power. The models are too large to run locally in browsers. However, basic pattern matching for common sensitive data (like credit cards) works offline after initial loading."
+  },
+  {
+    "q": "ai suggest secret folder|ai recommend vault|ai file suggestions",
+    "a": "Yes! After AI analyzes files for sensitivity, it automatically suggests which files should be stored in the Secret Vault. Files with high sensitivity scores, personal documents, or financial data get 'Vault Recommended' tags. You can accept or ignore these AI suggestions."
+  },
+  {
+    "q": "ai financial document accuracy|financial detection accuracy|bank statement detection",
+    "a": "AI achieves 97%+ accuracy in detecting financial documents including bank statements, tax returns, investment reports, loan documents, and payment records. It recognizes financial keywords, account numbers, monetary amounts, and financial institution headers across multiple formats and languages."
+  },
+  {
+    "q": "forticrypt learn user behavior|adaptive learning|personalized ai",
+    "a": "Yes! FortiCrypt learns from user behavior over time. When you mark AI detections as correct/incorrect, the system adapts to your preferences. It learns your sensitivity thresholds, common file types, and naming patterns to provide increasingly accurate suggestions and warnings."
+  },
+  {
+    "q": "hide multiple files image|multiple files steganography|batch hide files",
+    "a": "Currently, steganography hides one text message per image. Hiding multiple files in a single image is not supported yet, but you can combine multiple text files into one message before hiding. Advanced multi-file steganography is planned for future updates."
+  },
+  {
+    "q": "steganography file size limit|hidden file size limit|image hiding limit",
+    "a": "The size limit for hidden data depends on the image resolution. A 1920x1080 image can hide approximately 2-3KB of text data using LSB technique. Larger images can hide more data. The system calculates and shows available space before hiding data."
+  },
+  {
+    "q": "hide audio video files|steganography multimedia|hide media files",
+    "a": "Current steganography only supports hiding text messages in images. Hiding audio or video files inside images is not currently supported due to size limitations and complexity. However, you can convert small audio to text format (base64) and hide that."
+  },
+  {
+    "q": "secret folder sync devices|vault multi device|sync across devices",
+    "a": "Secret Vault data is stored securely on our servers and syncs across all your devices when you log in. Your vault passphrase is required on each device to decrypt and access the data. This provides secure synchronization while maintaining zero-knowledge security."
+  },
+  {
+    "q": "compressed hidden image|whatsapp compression steganography|image compression hidden data",
+    "a": "Image compression (like WhatsApp, social media) destroys hidden steganographic data! The compression algorithms alter pixel values, making hidden data unrecoverable. Always share steganographic images through uncompressed channels like email attachments or direct file transfer."
+  },
+  {
+    "q": "two factor authentication|2fa login|enable 2fa",
+    "a": "FortiCrypt uses OTP-based verification for sensitive operations, which provides strong security. Traditional 2FA (TOTP apps like Google Authenticator) is planned for future updates. Currently, email-based OTP for file operations provides multi-factor security for your most sensitive actions."
+  },
+  {
+    "q": "activity logs|what logs kept|user activity tracking",
+    "a": "FortiCrypt logs: Login/logout times, file uploads/downloads, encryption/decryption events, AI scan results, OTP verifications, secure link generations, and security events. All logs include timestamps, IP addresses, and are stored immutably on blockchain for audit compliance."
+  },
+  {
+    "q": "admin reset encryption keys|administrator key access|admin key reset",
+    "a": "No! Administrators cannot reset or access your encryption keys due to zero-knowledge architecture. Only you have access to your keys. If you lose keys, even admins cannot recover your files. This ensures complete privacy - not even FortiCrypt staff can decrypt your files."
+  },
+  {
+    "q": "delete account file retention|account deletion files|what happens delete account",
+    "a": "When you delete your account, all your encrypted files, keys, vault data, and personal information are permanently deleted within 24 hours. This is irreversible. Download any important files before account deletion. Blockchain logs retain only anonymized metadata for compliance."
+  },
+  {
+    "q": "prevent cloud upload|local only processing|no cloud upload",
+    "a": "FortiCrypt is designed as a cloud-based security platform. Files are encrypted locally in your browser, then uploaded encrypted. You cannot prevent cloud upload while using the service. For completely offline encryption, consider using the downloadable tools or API for local processing."
+  },
+  {
+    "q": "windows macos linux support|cross platform support|operating system compatibility",
+    "a": "FortiCrypt works perfectly on Windows, macOS, and Linux through web browsers. No installation required. Supports Chrome 80+, Firefox 75+, Safari 13+, Edge 80+ on all platforms. The web-based design ensures identical functionality across all operating systems."
+  },
+  {
+    "q": "mobile app|smartphone app|mobile version",
+    "a": "FortiCrypt is fully responsive and works excellently on mobile browsers (iOS Safari, Android Chrome). While there's no native mobile app yet, the web interface is optimized for mobile with touch-friendly controls, mobile layouts, and full feature access on smartphones and tablets."
+  },
+  {
+    "q": "command line version|cli tool|terminal interface",
+    "a": "A command-line interface (CLI) is planned for advanced users and automation. Currently, you can use the comprehensive REST API for programmatic access and automation. The API provides all functionality needed for scripting and integration with other systems."
+  },
+  {
+    "q": "ldap sso integration|corporate login|active directory integration",
+    "a": "Enterprise customers can integrate FortiCrypt with LDAP, Active Directory, and SSO systems like SAML, OAuth, and Azure AD. This allows seamless corporate authentication while maintaining individual encryption keys. Contact enterprise support for integration setup and configuration."
+  },
+  {
+    "q": "automatic key rotation|key rotation security|rotate encryption keys",
+    "a": "FortiCrypt uses unique keys for each file, which provides better security than key rotation. Each encryption operation generates fresh keys and IVs. For enterprise environments, scheduled key rotation for vault access and system keys can be configured through admin settings for enhanced security."
+  },
+  {
+    "q": "aes keys memory exposure|key material memory protection|encryption keys in memory",
+    "a": "FortiCrypt uses secure memory allocation and immediate key zeroization after use. Keys exist in browser memory only during active encryption/decryption operations and are cleared using crypto.subtle APIs. For enterprise deployments, HSM integration ensures keys never touch general-purpose memory."
+  },
+  {
+    "q": "generate own encryption keys|custom key generation|bring your own key",
+    "a": "Yes! FortiCrypt supports BYOK (Bring Your Own Key). You can provide custom encryption keys in hexadecimal format during encryption. The system validates key strength and format. For enterprise users, integration with external key management systems allows centralized key governance."
+  },
+  {
+    "q": "entropy source iv generation|random number generation|cryptographic randomness",
+    "a": "FortiCrypt uses Web Crypto API's secure random number generator, which leverages OS-level entropy sources (hardware RNG, mouse movements, keyboard timings). For server-side operations, /dev/urandom on Linux and CryptGenRandom on Windows provide cryptographically secure entropy."
+  },
+  {
+    "q": "hybrid encryption rsa aes|rsa aes combination|asymmetric symmetric encryption",
+    "a": "Yes! FortiCrypt supports hybrid encryption where RSA encrypts AES keys and AES encrypts file data. This combines RSA's key exchange capabilities with AES's performance for large files. Enterprise customers can configure custom hybrid schemes with different key sizes."
+  },
+  {
+    "q": "encryption modes cbc gcm ctr|cipher modes configuration|block cipher modes",
+    "a": "FortiCrypt supports multiple cipher modes: CBC (default), GCM (authenticated encryption), CTR (counter mode), and CFB. Enterprise users can configure organization-wide cipher mode policies. GCM is recommended for integrity protection, while CBC provides broad compatibility."
+  },
+  {
+    "q": "key storage hsm tpm|hardware security module|key material storage",
+    "a": "Enterprise deployments support HSM integration (AWS CloudHSM, Azure Dedicated HSM, Thales Luna) and TPM 2.0 for hardware-backed key storage. Standard users rely on browser secure storage with additional key derivation. HSMs provide FIPS 140-2 Level 3 protection."
+  },
+  {
+    "q": "identical files same ciphertext|deterministic encryption|ciphertext uniqueness",
+    "a": "No! Each encryption uses unique IVs (Initialization Vectors) and salts, ensuring identical files produce completely different ciphertext. This prevents pattern analysis and frequency attacks. Even encrypting the same file twice with the same key produces different ciphertext."
+  },
+  {
+    "q": "external kms integration|aws kms azure keyvault|key management system integration",
+    "a": "Enterprise FortiCrypt integrates with major KMS platforms: AWS KMS, Azure Key Vault, HashiCorp Vault, Google Cloud KMS. This enables centralized key lifecycle management, policy enforcement, and compliance reporting while maintaining FortiCrypt's zero-knowledge architecture."
+  },
+  {
+    "q": "key rotation active upload|rotation during encryption|concurrent key operations",
+    "a": "Key rotation during active uploads is handled gracefully. Current operations complete with existing keys while new operations use rotated keys. The system maintains key version tracking and ensures no data loss. Critical uploads are protected with atomic key transition mechanisms."
+  },
+  {
+    "q": "post quantum encryption|quantum resistant algorithms|future proof encryption",
+    "a": "FortiCrypt is evaluating NIST post-quantum cryptography standards (Kyber, Dilithium, FALCON). Hybrid classical-quantum schemes are in development. Enterprise customers can enable experimental post-quantum algorithms for future-proofing against quantum computing threats."
+  },
+  {
+    "q": "otp brute force protection|otp security attacks|brute force prevention",
+    "a": "OTPs use 6-digit codes (1 million combinations) with exponential backoff, account lockout after 5 failed attempts, and IP-based rate limiting. Each OTP attempt is logged immutably on blockchain. Advanced protection includes device fingerprinting and behavioral analysis."
+  },
+  {
+    "q": "otp invalidation concurrent access|simultaneous otp attempts|concurrent validation",
+    "a": "OTPs use atomic database transactions with distributed locks to prevent race conditions. Only the first valid attempt succeeds; subsequent attempts are immediately invalidated. The system maintains consistency across multiple servers using consensus algorithms."
+  },
+  {
+    "q": "ip restrictions secure links|geofencing download links|location based access",
+    "a": "Yes! Secure links support IP whitelisting, geofencing by country/region, and VPN detection. Enterprise customers can configure organization IP ranges, block Tor/proxy networks, and require specific geographic locations for file access."
+  },
+  {
+    "q": "secure link token interception|token hijacking protection|link security",
+    "a": "Secure link tokens use JWT with short expiration, HTTPS-only transmission, and anti-replay mechanisms. Tokens are bound to IP addresses and browser fingerprints. Interception attempts trigger security alerts and automatic token revocation."
+  },
+  {
+    "q": "audit logs otp secure links|comprehensive logging|security event logging",
+    "a": "Every OTP generation, validation attempt, secure link creation, access, and expiration is logged immutably on blockchain with timestamps, IP addresses, user agents, and geographic data. Logs are exportable in SIEM-compatible formats for compliance."
+  },
+  {
+    "q": "replay attack protection|anti replay mechanisms|secure link replay",
+    "a": "Secure links include cryptographic nonces, timestamp validation, and one-time-use tokens to prevent replay attacks. Each successful access invalidates the token. Enterprise deployments use distributed replay detection across multiple data centers."
+  },
+  {
+    "q": "push notification otp|secure otp delivery|alternative otp methods",
+    "a": "Enterprise FortiCrypt supports push notifications through mobile apps with end-to-end encryption. Push OTPs use device-specific keys and biometric confirmation. This reduces phishing risk compared to email/SMS and provides offline capability."
+  },
+  {
+    "q": "multi step authentication|layered authentication|otp password qr",
+    "a": "Yes! FortiCrypt supports multi-step authentication: something you know (password), something you have (OTP device), and something you are (biometrics via WebAuthn). Enterprise deployments can enforce all three factors for high-security environments."
+  },
+  {
+    "q": "otp phishing protection|anti phishing measures|secure otp delivery",
+    "a": "OTP emails include anti-phishing measures: sender verification, unique visual tokens, encrypted delivery, and warnings about legitimate domains. Advanced protection includes QR codes with cryptographic signatures and push notifications to verified devices."
+  },
+  {
+    "q": "organization network restrictions|corporate network access|internal network only",
+    "a": "Enterprise customers can restrict secure links to corporate networks using IP ranges, VPN requirements, and network certificates. Integration with corporate firewalls and zero-trust networks ensures files are only accessible from authorized corporate infrastructure."
+  },
+  {
+    "q": "ai data classification|personal financial medical detection|data type differentiation",
+    "a": "FortiCrypt AI uses specialized models for each data type: RegEx patterns for financial data, NER (Named Entity Recognition) for personal data, and medical ontologies for healthcare information. Each classifier has dedicated training datasets and confidence thresholds."
+  },
+  {
+    "q": "ai malicious payload detection|malware in pdf|hidden threat detection",
+    "a": "Yes! AI performs deep content analysis detecting embedded JavaScript in PDFs, macro viruses in Office documents, steganographic malware in images, and suspicious file structures. It uses behavioral analysis and entropy detection for zero-day threat identification."
+  },
+  {
+    "q": "gdpr right to erasure|ai compliance|privacy regulation compliance",
+    "a": "FortiCrypt AI supports automated GDPR compliance with 'Right to Erasure' detection. When AI identifies personal data, it can automatically flag files for retention policies, anonymization, or deletion. Enterprise customers get compliance dashboards and automated reporting."
+  },
+  {
+    "q": "ai regional compliance|hipaa gdpr pci dss|regulatory adaptation",
+    "a": "AI models can be configured for regional compliance requirements: HIPAA for healthcare, GDPR for EU personal data, PCI-DSS for payment information, SOX for financial records. Region-specific detection rules and compliance reporting are automatically applied."
+  },
+  {
+    "q": "ai false negatives|sensitive data leakage|detection accuracy",
+    "a": "FortiCrypt uses ensemble AI models with multiple detection layers to minimize false negatives. Conservative thresholds, human-in-the-loop validation, and continuous model retraining reduce the risk of sensitive data being missed. Critical data types have multiple redundant checks."
+  },
+  {
+    "q": "ai confidence score|sensitivity scoring|detection confidence",
+    "a": "Yes! AI provides confidence scores (0-100%) for each sensitivity detection. Scores are based on pattern strength, context analysis, and model certainty. Enterprise users can set custom thresholds and require human review for medium-confidence detections."
+  },
+  {
+    "q": "ai offline air gapped|offline ai analysis|isolated system ai",
+    "a": "Yes! FortiCrypt offers offline AI deployment for air-gapped systems. Pre-trained models can be deployed locally without internet connectivity. Updates are delivered via secure offline packages. Perfect for military, government, and high-security environments."
+  },
+  {
+    "q": "ai model retraining|dataset updates|model refresh cycle",
+    "a": "AI models are retrained quarterly using anonymized datasets from security research, threat intelligence feeds, and user feedback. Enterprise customers can provide domain-specific training data while maintaining privacy through federated learning approaches."
+  },
+  {
+    "q": "ai document redaction|sensitive data redaction|automatic censoring",
+    "a": "Yes! FortiCrypt AI can automatically redact sensitive portions while preserving document usability. It identifies and blacks out SSNs, credit cards, addresses while keeping non-sensitive content readable. Redacted documents maintain original formatting."
+  },
+  {
+    "q": "blockchain ai explainability|audit trail ai decisions|ai transparency",
+    "a": "Every AI decision is logged on blockchain with model version, confidence scores, detected patterns, and reasoning chains. This provides complete explainability for security audits and regulatory compliance. AI decisions can be traced and verified post-analysis."
+  },
+  {
+    "q": "steganography lossy compression|jpeg mp3 stego survival|compression resistance",
+    "a": "Standard LSB steganography doesn't survive lossy compression. FortiCrypt offers DCT-based steganography for JPEG images and spread-spectrum techniques for audio that can survive moderate compression. These advanced methods trade payload size for compression resistance."
+  },
+  {
+    "q": "hidden file encryption|encrypt before hiding|stego payload encryption",
+    "a": "Yes! Hidden payloads are encrypted with AES-256 before steganographic embedding. This provides dual protection: encryption secures the data, while steganography conceals its existence. Even if steganography is detected, the payload remains encrypted."
+  },
+  {
+    "q": "steganography forensic detection|steganalysis resistance|forensic tools detection",
+    "a": "FortiCrypt steganography uses advanced techniques to resist steganalysis: randomized embedding patterns, statistical normalization, and entropy preservation. While sophisticated forensic tools can detect steganography, casual analysis won't reveal hidden data."
+  },
+  {
+    "q": "recursive steganography|nested hidden files|multi layer hiding",
+    "a": "Yes! FortiCrypt supports recursive steganography - hiding a file inside another hidden file. This creates multiple layers of concealment. Each layer uses different steganographic techniques for maximum security. Perfect for highly sensitive data protection."
+  },
+  {
+    "q": "structured data steganography|database csv hiding|data structure concealment",
+    "a": "FortiCrypt can hide structured data (CSV, JSON, XML) by converting to text format before steganographic embedding. Large databases can be compressed and encrypted before hiding. The system preserves data relationships during extraction."
+  },
+  {
+    "q": "hidden payload size limits|steganographic capacity|carrier file ratio",
+    "a": "Payload size depends on carrier file: images support ~0.1% of file size using LSB, audio files ~1% using spread-spectrum. A 1MB image can hide ~1KB of data while remaining undetectable. Larger payloads require multiple carrier files."
+  },
+  {
+    "q": "steganography image manipulation|crop resize impact|stego data survival",
+    "a": "Basic LSB steganography is destroyed by cropping, resizing, or rotation. FortiCrypt offers robust steganography using DCT coefficients and frequency domain techniques that can survive minor image modifications while maintaining data integrity."
+  },
+  {
+    "q": "hidden file watermarking|tamper detection stego|steganographic integrity",
+    "a": "Hidden files can include cryptographic watermarks and integrity hashes. Any tampering with the carrier file or hidden data is immediately detected during extraction. Digital signatures ensure authenticity of both carrier and hidden content."
+  },
+  {
+    "q": "secret folder filesystem hiding|anti forensics|hidden folder protection",
+    "a": "Secret Vault exists only in encrypted database form, not as filesystem folders. This provides anti-forensic protection as there are no file traces on disk. Enterprise deployments can use hardware secure enclaves for additional concealment."
+  },
+  {
+    "q": "hardware secure enclaves|tee steganography|secure extraction environment",
+    "a": "Enterprise FortiCrypt supports hardware-based Trusted Execution Environments (TEE) and secure enclaves (Intel SGX, ARM TrustZone) for steganographic extraction. This ensures hidden data never touches unprotected memory during processing."
+  },
+  {
+    "q": "organization encryption policies|enterprise policy enforcement|mandatory encryption settings",
+    "a": "Enterprise FortiCrypt enforces organization-wide policies: mandatory encryption algorithms, key lengths, retention periods, and access controls. Policies are centrally managed and automatically applied to all users with compliance reporting and violation alerts."
+  },
+  {
+    "q": "immutable blockchain logging|audit trail integrity|tamper proof logs",
+    "a": "Yes! Every user action is logged immutably on private blockchain with cryptographic hashing, consensus verification, and distributed storage. Audit trails cannot be modified or deleted, providing legally admissible evidence for compliance and forensic investigations."
+  },
+  {
+    "q": "admin file recovery|law enforcement access|emergency file access",
+    "a": "Administrators cannot recover user files due to zero-knowledge architecture. For law enforcement requests, enterprise customers can configure escrow keys with multi-party authorization and legal compliance workflows while maintaining individual privacy rights."
+  },
+  {
+    "q": "non repudiation proof|digital signatures|action authenticity",
+    "a": "FortiCrypt provides cryptographic non-repudiation through digital signatures on all file operations. Blockchain timestamps, user certificates, and audit trails provide legally binding proof of user actions that cannot be disputed or forged."
+  },
+  {
+    "q": "forensic file verification|authenticity proof|file integrity verification",
+    "a": "Decrypted files include cryptographic signatures and blockchain-verified provenance chains. Hash comparisons, timestamp verification, and digital signatures prove file authenticity and detect any tampering throughout the file's lifecycle."
+  },
+  {
+    "q": "duplicate file handling|same file different users|deduplication security",
+    "a": "Each user's files are encrypted with unique keys even if content is identical. No deduplication occurs to prevent data correlation attacks. Each file maintains separate audit trails and access controls while preserving individual user privacy."
+  },
+  {
+    "q": "compliance reporting|external auditors|regulatory reports",
+    "a": "FortiCrypt generates comprehensive compliance reports for external auditors including access logs, encryption status, policy violations, and risk assessments. Reports are customizable for different regulatory frameworks (SOX, GDPR, HIPAA) with automated scheduling."
+  },
+  {
+    "q": "siem integration|splunk elk|security monitoring",
+    "a": "Enterprise FortiCrypt integrates with major SIEM platforms (Splunk, ELK, QRadar, ArcSight) via REST APIs and log forwarding. Real-time security events, user behavior analytics, and threat detection feeds enhance organizational security monitoring."
+  },
+  {
+    "q": "file ownership tracking|shared file ownership|multi user files",
+    "a": "File ownership is tracked through blockchain records with transfer history, permission changes, and access logs. Shared files maintain granular permission tracking with audit trails for every user interaction and ownership transfer."
+  },
+  {
+    "q": "insider threat detection|bypass detection|unauthorized access detection",
+    "a": "FortiCrypt uses behavioral analytics, anomaly detection, and access pattern analysis to identify insider threats. Unusual encryption bypassing, bulk downloads, or access pattern changes trigger security alerts and automated policy enforcement."
+  },
+  {
+    "q": "kubernetes deployment|container orchestration|scalability deployment",
+    "a": "Yes! FortiCrypt supports Kubernetes deployment with horizontal auto-scaling, load balancing, and microservices architecture. Helm charts, ConfigMaps, and secrets management enable enterprise-grade container orchestration with high availability."
+  },
+  {
+    "q": "file throughput performance|maximum files per second|performance metrics",
+    "a": "FortiCrypt can process 100+ concurrent file operations per second depending on file size and hardware. Enterprise deployments with dedicated infrastructure achieve higher throughput with horizontal scaling and optimized resource allocation."
+  },
+  {
+    "q": "multithreading encryption|parallel processing|large file optimization",
+    "a": "Yes! FortiCrypt uses Web Workers for multi-threaded encryption/decryption, chunk-based processing for large files, and parallel I/O operations. This maximizes CPU utilization and reduces processing time for large files while maintaining security."
+  },
+  {
+    "q": "low memory devices|resource optimization|mobile performance",
+    "a": "FortiCrypt automatically adjusts chunk sizes and buffer allocation based on available memory. Streaming encryption, progressive loading, and memory pooling ensure smooth operation on low-memory devices without compromising security or functionality."
+  },
+  {
+    "q": "air gapped deployment|military environments|isolated systems",
+    "a": "FortiCrypt supports fully air-gapped deployments for military and government use. Offline operation includes local AI models, offline blockchain consensus, and sneakernet-based updates. All cryptographic operations work without external connectivity."
+  },
+  {
+    "q": "system crash recovery|encryption crash recovery|fault tolerance",
+    "a": "FortiCrypt implements atomic operations with rollback capabilities. System crashes during encryption result in clean state recovery with no corrupted files. Checkpoint mechanisms and transaction logs ensure data integrity even during unexpected failures."
+  },
+  {
+    "q": "concurrent user scaling|thousands of users|multi user performance",
+    "a": "FortiCrypt scales to thousands of concurrent users through microservices architecture, database sharding, CDN integration, and auto-scaling infrastructure. Load balancing and session management ensure consistent performance under high user loads."
+  },
+  {
+    "q": "encrypted backup|backup without decryption|secure backup solutions",
+    "a": "Yes! Encrypted files can be backed up without ever decrypting them. Backup systems work with encrypted blobs, maintaining zero-knowledge principles. Enterprise deployments support automated encrypted backups to multiple cloud providers with key escrow options."
+  },
+  {
+    "q": "dlp integration|data loss prevention|dlp system integration",
+    "a": "FortiCrypt integrates with major DLP systems (Symantec, Forcepoint, Microsoft Purview) through APIs and policy engines. Encrypted files can be tagged and tracked by DLP systems while maintaining encryption and privacy protection."
+  },
+  {
+    "q": "blockchain performance impact|logging latency|blockchain overhead",
+    "a": "Blockchain logging adds minimal latency (10-50ms) through asynchronous processing and batched transactions. Performance impact is negligible for normal operations. Enterprise deployments can configure logging levels and use high-performance blockchain networks for optimization."
+  },
+  {
+    "q": "how can i access deekshi|access deekshi|how to access deekshi|new user access|first time access|account access help",
+    "a": "For new users having trouble accessing your account: Click on 'Forgot Password' → Enter your email → Check your email for OTP → Enter the OTP → Set a new password → Confirm the password → Your account will be locked briefly → Login again with your new credentials → You can now access your account and use Deekshi! This process ensures secure account recovery for new users."
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "index": 0,
+    "timestamp": 1756553437654,
+    "fileHash": "Genesis Block",
+    "previousHash": "0",
+    "nonce": 0,
+    "hash": "8a29a6bc7fc09a418369d8873e10180c5392c903a3fd620fd101431ef610660e"
+  }
+]

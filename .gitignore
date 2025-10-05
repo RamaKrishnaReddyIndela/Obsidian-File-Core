@@ -1,0 +1,28 @@
+# Node modules
+**/node_modules/
+
+# Environment files
+**/.env
+**/.env.local
+**/.env.development.local
+**/.env.test.local
+**/.env.production.local
+
+# Logs and runtime
+**/*.log
+OFC-backend/logs/
+
+# Build outputs
+OFC-frontend/build/
+OFC-backend/build/
+OFC-backend/dist/
+coverage/
+
+# Uploads and generated data
+OFC-backend/uploads/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

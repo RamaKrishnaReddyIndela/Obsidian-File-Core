@@ -1,0 +1,47 @@
+{
+  "dashboard": {
+    "title": "फोर्टिक्रिप्ट डैशबोर्ड",
+    "helpChat": "सहायता और चैट",
+    "secretVault": "सीक्रेट वॉल्ट",
+    "tools": {
+      "encryption": "एन्क्रिप्शन",
+      "decryption": "डिक्रिप्शन",
+      "maliciousFinder": "हानिकारक सामग्री खोजक",
+      "sensitivityFinder": "संवेदनशीलता खोजक",
+      "aiAnalyzer": "एआई विश्लेषक",
+      "mlScanner": "एमएल स्कैनर",
+      "history": "इतिहास",
+      "otherTools": "अन्य उपकरण"
+    }
+  },
+  "profile": {
+    "title": "प्रोफ़ाइल विवरण",
+    "fullName": "पूरा नाम",
+    "email": "ईमेल",
+    "phone": "फ़ोन",
+    "zkpKey": "ZKP पब्लिक की",
+    "address": "पता",
+    "company": "कंपनी",
+    "preferences": "प्राथमिकताएँ",
+    "line1": "पंक्ति 1",
+    "line2": "पंक्ति 2",
+    "city": "शहर",
+    "state": "राज्य",
+    "country": "देश",
+    "zip": "पिन कोड",
+    "companyName": "कंपनी का नाम",
+    "registrationNumber": "पंजीकरण संख्या",
+    "website": "वेबसाइट",
+    "companyAddress": "कंपनी का पता"
+  },
+  "actions": {
+    "close": "बंद करें",
+    "save": "सेव करें",
+    "logout": "लॉगआउट",
+    "sendOtp": "ओटीपी भेजें",
+    "verify": "सत्यापित करें"
+  },
+  "common": {
+    "records": "रिकॉर्ड"
+  }
+}

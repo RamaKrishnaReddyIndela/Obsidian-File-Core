@@ -1,0 +1,6 @@
+{
+  "dashboard": {"title": "فورٹي کرپٹ ڈیش بورڈ","helpChat": "مدد اور چیٹ","secretVault": "خفیہ والٹ","tools": {"encryption": "خفیہ کاری","decryption": "اخراجِ رمز","maliciousFinder": "مضر مواد تلاش","sensitivityFinder": "حساسیت تلاش","aiAnalyzer": "AI تجزیہ کار","mlScanner": "ML اسکینر","history": "تاریخ","otherTools": "دیگر ٹولز"}},
+  "profile": {"title": "پروفائل تفصیلات","fullName": "پورا نام","email": "ای میل","phone": "فون","zkpKey": "ZKP پبلک کی","address": "پتہ","company": "کمپنی","preferences": "ترجیحات","line1": "لائن 1","line2": "لائن 2","city": "شہر","state": "صوبہ","country": "ملک","zip": "پوسٹ کوڈ","companyName": "کمپنی کا نام","registrationNumber": "رجسٹریشن نمبر","website": "ویب سائٹ","companyAddress": "کمپنی کا پتہ"},
+  "actions": {"close": "بند کریں","save": "محفوظ کریں","logout": "لاگ آؤٹ","sendOtp": "OTP بھیجیں","verify": "تصدیق کریں"},
+  "common": {"records": "ریکارڈز"}
+}

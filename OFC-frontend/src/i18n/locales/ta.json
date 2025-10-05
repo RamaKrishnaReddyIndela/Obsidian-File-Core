@@ -1,0 +1,47 @@
+{
+  "dashboard": {
+    "title": "Obsidian File Core டாஷ்போர்டு",
+    "helpChat": "உதவி & உரையாடல்",
+    "secretVault": "ரகசிய சேமிப்பு",
+    "tools": {
+      "encryption": "குறியாக்கம்",
+      "decryption": "குறிகுறி நீக்கம்",
+      "maliciousFinder": "தீங்கான உள்ளடக்க கண்டறிதல்",
+      "sensitivityFinder": "நுணுக்கத் தகவல் கண்டறிதல்",
+      "aiAnalyzer": "AI பகுப்பாய்வு",
+      "mlScanner": "ML ஸ்கேனர்",
+      "history": "வரலாறு",
+      "otherTools": "பிற கருவிகள்"
+    }
+  },
+  "profile": {
+    "title": "சுயவிவர விவரங்கள்",
+    "fullName": "முழுப் பெயர்",
+    "email": "மின்னஞ்சல்",
+    "phone": "தொலைபேசி",
+    "zkpKey": "ZKP பொது விசை",
+    "address": "முகவரி",
+    "company": "நிறுவனம்",
+    "preferences": "முன்னுரிமைகள்",
+    "line1": "வரி 1",
+    "line2": "வரி 2",
+    "city": "நகரம்",
+    "state": "மாநிலம்",
+    "country": "நாடு",
+    "zip": "அஞ்சல் குறியீடு",
+    "companyName": "நிறுவனம் பெயர்",
+    "registrationNumber": "பதிவேடு எண்",
+    "website": "இணையதளம்",
+    "companyAddress": "நிறுவன முகவரி"
+  },
+  "actions": {
+    "close": "மூடு",
+    "save": "சேமிக்க",
+    "logout": "வெளியேறு",
+    "sendOtp": "OTP அனுப்பு",
+    "verify": "சரிபார்"
+  },
+  "common": {
+    "records": "பதிவுகள்"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "dashboard": {
+    "title": "ఫోర్టిక్రిప్ట్ డ్యాష్‌బోర్డ్",
+    "helpChat": "సహాయం & చాట్",
+    "secretVault": "రహస్య వాల్ట్",
+    "tools": {
+      "encryption": "సంకేతీకరణ",
+      "decryption": "డీక్రిప్షన్",
+      "maliciousFinder": "హానికర కంటెంట్ గుర్తింపు",
+      "sensitivityFinder": "సున్నిత సమాచారం గుర్తింపు",
+      "aiAnalyzer": "AI విశ్లేషకుడు",
+      "mlScanner": "ML స్కానర్",
+      "history": "చరిత్ర",
+      "otherTools": "ఇతర సాధనాలు"
+    }
+  },
+  "profile": {
+    "title": "ప్రొఫైల్ వివరాలు",
+    "fullName": "పూర్తి పేరు",
+    "email": "ఈమెయిల్",
+    "phone": "ఫోన్",
+    "zkpKey": "ZKP పబ్లిక్ కీ",
+    "address": "చిరునామా",
+    "company": "కంపెనీ",
+    "preferences": "అభిరుచులు",
+    "line1": "లైన్ 1",
+    "line2": "లైన్ 2",
+    "city": "నగరం",
+    "state": "రాష్ట్రం",
+    "country": "దేశం",
+    "zip": "పిన్ కోడ్",
+    "companyName": "కంపెనీ పేరు",
+    "registrationNumber": "నమోదు సంఖ్య",
+    "website": "వెబ్‌సైట్",
+    "companyAddress": "కంపెనీ చిరునామా"
+  },
+  "actions": {
+    "close": "మూసివేయండి",
+    "save": "సేవ్ చేయండి",
+    "logout": "లాగ్ అవుట్",
+    "sendOtp": "OTP పంపండి",
+    "verify": "నిర్ధారించండి"
+  },
+  "common": {
+    "records": "రికార్డులు"
+  }
+}

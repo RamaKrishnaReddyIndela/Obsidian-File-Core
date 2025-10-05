@@ -1,0 +1,47 @@
+{
+  "dashboard": {
+    "title": "Obsidian File Core Dashboard",
+    "helpChat": "Help & Chat",
+    "secretVault": "Secret Vault",
+    "tools": {
+      "encryption": "Encryption",
+      "decryption": "Decryption",
+      "maliciousFinder": "Malicious Content Finder",
+      "sensitivityFinder": "Sensitivity Finder",
+      "aiAnalyzer": "AI Analyzer",
+      "mlScanner": "ML Scanner",
+      "history": "History",
+      "otherTools": "Other Tools"
+    }
+  },
+  "profile": {
+    "title": "Profile Details",
+    "fullName": "Full Name",
+    "email": "Email",
+    "phone": "Phone",
+    "zkpKey": "ZKP Public Key",
+    "address": "Address",
+    "company": "Company",
+    "preferences": "Preferences",
+    "line1": "Line 1",
+    "line2": "Line 2",
+    "city": "City",
+    "state": "State",
+    "country": "Country",
+    "zip": "ZIP",
+    "companyName": "Company Name",
+    "registrationNumber": "Registration Number",
+    "website": "Website",
+    "companyAddress": "Company Address"
+  },
+  "actions": {
+    "close": "Close",
+    "save": "Save",
+    "logout": "Logout",
+    "sendOtp": "Send OTP",
+    "verify": "Verify"
+  },
+  "common": {
+    "records": "Records"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "dashboard": {"title": "ફોર્ટિક્રીપ્ટ ડેશબોર્ડ","helpChat": "સહાય અને ચેટ","secretVault": "ગુપ્ત વૉલ્ટ","tools": {"encryption": "એન્ક્રિપ્શન","decryption": "ડિક્રિપ્શન","maliciousFinder": "હાનિકારક સામગ્રી શોધક","sensitivityFinder": "સેન્સિટિવિટી શોધક","aiAnalyzer": "AI વિશ્લેષક","mlScanner": "ML સ્કેનર","history": "ઇતિહાસ","otherTools": "અન્ય ટૂલ્સ"}},
+  "profile": {"title": "પ્રોફાઇલ વિગતો","fullName": "પૂર્ણ નામ","email": "ઈમેઈલ","phone": "ફોન","zkpKey": "ZKP જાહેર કી","address": "સરનામું","company": "કંપની","preferences": "પસંદગીઓ","line1": "લાઈન 1","line2": "લાઈન 2","city": "શહેર","state": "રાજ્ય","country": "દેશ","zip": "પિન કોડ","companyName": "કંપનીનું નામ","registrationNumber": "નોંધણી નંબર","website": "વેબસાઇટ","companyAddress": "કંપની સરનામું"},
+  "actions": {"close": "બંધ કરો","save": "સાચવો","logout": "લૉગઆઉટ","sendOtp": "OTP મોકલો","verify": "ચકાસો"},
+  "common": {"records": "રેકોર્ડ્સ"}
+}

@@ -1,0 +1,47 @@
+{
+  "dashboard": {
+    "title": "ಫೋರ್ಟ್‌ಕ್ರಿಪ್ಟ್ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್",
+    "helpChat": "ಸಹಾಯ ಮತ್ತು ಚಾಟ್",
+    "secretVault": "ರಹಸ್ಯ ಭಂಡಾರ",
+    "tools": {
+      "encryption": "ಗೂಢೀಕರಣ",
+      "decryption": "ಡಿಕ್ರಿಪ್ಷನ್",
+      "maliciousFinder": "ಹಾನಿಕಾರಕ ವಿಷಯ ಪತ್ತೆ",
+      "sensitivityFinder": "ಸಂವೇದನಶೀಲ ಮಾಹಿತಿಯ ಪತ್ತೆ",
+      "aiAnalyzer": "AI ವಿಶ್ಲೇಷಕ",
+      "mlScanner": "ML ಸ್ಕ್ಯಾನರ್",
+      "history": "ಇತಿಹಾಸ",
+      "otherTools": "ಇತರೆ ಸಾಧನಗಳು"
+    }
+  },
+  "profile": {
+    "title": "ಪ್ರೊಫೈಲ್ ವಿವರಗಳು",
+    "fullName": "ಪೂರ್ಣ ಹೆಸರು",
+    "email": "ಇಮೇಲ್",
+    "phone": "ಫೋನ್",
+    "zkpKey": "ZKP ಪಬ್ಲಿಕ್ ಕೀ",
+    "address": "ವಿಳಾಸ",
+    "company": "ಕಂಪನಿ",
+    "preferences": "ಆಯ್ಕೆಗಳು",
+    "line1": "ಸಾಲು 1",
+    "line2": "ಸಾಲು 2",
+    "city": "ನಗರ",
+    "state": "ರಾಜ್ಯ",
+    "country": "ದೇಶ",
+    "zip": "ಪಿನ್ ಕೋಡ್",
+    "companyName": "ಕಂಪನಿ ಹೆಸರು",
+    "registrationNumber": "ನೋಂದಣಿ ಸಂಖ್ಯೆ",
+    "website": "ವೆಬ್‌ಸೈಟ್",
+    "companyAddress": "ಕಂಪನಿಯ ವಿಳಾಸ"
+  },
+  "actions": {
+    "close": "ಮುಚ್ಚಿ",
+    "save": "ಉಳಿಸಿ",
+    "logout": "ಲಾಗ್‌ಔಟ್",
+    "sendOtp": "OTP ಕಳುಹಿಸಿ",
+    "verify": "ಪರಿಶೀಲಿಸಿ"
+  },
+  "common": {
+    "records": "ದಾಖಲೆಗಳು"
+  }
+}

@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-sans bg-gray-50 text-gray-900;
+}
+
+/* Dark mode styles */
+.dark body {
+  @apply bg-gray-900 text-gray-100;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+/* Add smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optional custom input styles */
+input:focus {
+  outline: none;
+  @apply border-blue-400 ring-2 ring-blue-300;
+}

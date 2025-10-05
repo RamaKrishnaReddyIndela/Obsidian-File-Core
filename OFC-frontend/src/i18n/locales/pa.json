@@ -1,0 +1,6 @@
+{
+  "dashboard": {"title": "ਫੋਰਟੀਕ੍ਰਿਪਟ ਡੈਸ਼ਬੋਰਡ","helpChat": "ਮਦਦ ਅਤੇ ਚੈਟ","secretVault": "ਰਾਜ਼ੀ ਵਾਲਟ","tools": {"encryption": "ਇਨਕ੍ਰਿਪਸ਼ਨ","decryption": "ਡੀਕ੍ਰਿਪਸ਼ਨ","maliciousFinder": "ਖ਼ਰਾਬ ਸਮੱਗਰੀ ਖੋਜਕ","sensitivityFinder": "ਸੰਵੇਦਨਸ਼ੀਲਤਾ ਖੋਜਕ","aiAnalyzer": "AI ਵਿਸ਼ਲੇਸ਼ਕ","mlScanner": "ML ਸਕੈਨਰ","history": "ਇਤਿਹਾਸ","otherTools": "ਹੋਰ ਟੂਲ"}},
+  "profile": {"title": "ਪ੍ਰੋਫ਼ਾਈਲ ਵੇਰਵੇ","fullName": "ਪੂਰਾ ਨਾਮ","email": "ਈਮੇਲ","phone": "ਫ਼ੋਨ","zkpKey": "ZKP ਪਬਲਿਕ ਕੀ","address": "ਪਤਾ","company": "ਕੰਪਨੀ","preferences": "ਪਸੰਦਾਂ","line1": "ਲਾਈਨ 1","line2": "ਲਾਈਨ 2","city": "ਸ਼ਹਿਰ","state": "ਰਾਜ","country": "ਦੇਸ਼","zip": "ਪਿਨ ਕੋਡ","companyName": "ਕੰਪਨੀ ਦਾ ਨਾਮ","registrationNumber": "ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਨੰਬਰ","website": "ਵੈੱਬਸਾਈਟ","companyAddress": "ਕੰਪਨੀ ਦਾ ਪਤਾ"},
+  "actions": {"close": "ਬੰਦ ਕਰੋ","save": "ਸੇਵ ਕਰੋ","logout": "ਲੌਗਆਉਟ","sendOtp": "OTP ਭੇਜੋ","verify": "ਤਸਦੀਕ ਕਰੋ"},
+  "common": {"records": "ਰੇਕਾਰਡ"}
+}

@@ -1,0 +1,47 @@
+{
+  "dashboard": {
+    "title": "ফর্টিক্রিপ্ট ড্যাশবোর্ড",
+    "helpChat": "সাহায্য ও চ্যাট",
+    "secretVault": "গোপন ভল্ট",
+    "tools": {
+      "encryption": "এনক্রিপশন",
+      "decryption": "ডিক্রিপশন",
+      "maliciousFinder": "ক্ষতিকারক কনটেন্ট শনাক্তকরণ",
+      "sensitivityFinder": "সংবেদনশীল তথ্য শনাক্তকরণ",
+      "aiAnalyzer": "AI বিশ্লেষক",
+      "mlScanner": "ML স্ক্যানার",
+      "history": "ইতিহাস",
+      "otherTools": "অন্যান্য টুল"
+    }
+  },
+  "profile": {
+    "title": "প্রোফাইল বিবরণ",
+    "fullName": "পূর্ণ নাম",
+    "email": "ইমেইল",
+    "phone": "ফোন",
+    "zkpKey": "ZKP পাবলিক কী",
+    "address": "ঠিকানা",
+    "company": "কোম্পানি",
+    "preferences": "পছন্দসমূহ",
+    "line1": "লাইন ১",
+    "line2": "লাইন ২",
+    "city": "শহর",
+    "state": "রাজ্য",
+    "country": "দেশ",
+    "zip": "পিন কোড",
+    "companyName": "কোম্পানির নাম",
+    "registrationNumber": "নিবন্ধন নম্বর",
+    "website": "ওয়েবসাইট",
+    "companyAddress": "কোম্পানির ঠিকানা"
+  },
+  "actions": {
+    "close": "বন্ধ করুন",
+    "save": "সংরক্ষণ করুন",
+    "logout": "লগআউট",
+    "sendOtp": "OTP পাঠান",
+    "verify": "যাচাই করুন"
+  },
+  "common": {
+    "records": "রেকর্ড"
+  }
+}

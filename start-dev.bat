@@ -24,17 +24,17 @@ echo [✓] Node.js and Python are installed
 echo.
 
 REM Install dependencies if not present
-if not exist "forticrypt-backend\node_modules" (
+if not exist "OFC-backend\node_modules" (
     echo [INFO] Installing backend dependencies...
-    cd forticrypt-backend
+    cd OFC-backend
     npm install
     cd ..
     echo.
 )
 
-if not exist "forticrypt-frontend\node_modules" (
+if not exist "OFC-frontend\node_modules" (
     echo [INFO] Installing frontend dependencies...
-    cd forticrypt-frontend
+    cd OFC-frontend
     npm install
     cd ..
     echo.
@@ -45,13 +45,13 @@ echo [INFO] Starting development servers...
 echo.
 
 REM Start backend in a new window
-start "Obsidian File Core Backend" cmd /k "cd forticrypt-backend && echo Starting backend server... && npm run dev"
+start "Obsidian File Core Backend" cmd /k "cd OFC-backend && echo Starting backend server... && npm run dev"
 
 REM Wait a few seconds for backend to start
 timeout /t 3 /nobreak >nul
 
 REM Start frontend in a new window
-start "Obsidian File Core Frontend" cmd /k "cd forticrypt-frontend && echo Starting frontend server... && npm start"
+start "Obsidian File Core Frontend" cmd /k "cd OFC-frontend && echo Starting frontend server... && npm start"
 
 echo.
 echo [✓] Obsidian File Core is starting up!

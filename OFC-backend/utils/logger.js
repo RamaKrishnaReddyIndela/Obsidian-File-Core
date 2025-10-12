@@ -1,16 +1,22 @@
 const fs = require('fs');
 const path = require('path');
 
-// ===== Ensure logs directory exists =====
-const logDir = path.join(__dirname, '..', 'logs');
-if (!fs.existsSync(logDir)) {
-  fs.mkdirSync(logDir, { recursive: true });
-}
+// ===== Detect if running in Vercel (read-only) =====
+const isServerless = !!process.env.VERCEL;
 
-// ===== Log file paths =====
-const logFile = path.join(logDir, 'app.log');
-const errorFile = path.join(logDir, 'error.log');
-const securityFile = path.join(logDir, 'security.log');
+// ===== Setup logging paths only if not in serverless =====
+let logFile, errorFile, securityFile;
+
+if (!isServerless) {
+  const logDir = path.join(__dirname, '..', 'logs');
+  if (!fs.existsSync(logDir)) {
+    fs.mkdirSync(logDir, { recursive: true });
+  }
+
+  logFile = path.join(logDir, 'app.log');
+  errorFile = path.join(logDir, 'error.log');
+  securityFile = path.join(logDir, 'security.log');
+}
 
 // ===== Helpers =====
 function formatMessage(message) {
@@ -19,20 +25,29 @@ function formatMessage(message) {
 }
 
 function log(message) {
-  fs.appendFileSync(logFile, formatMessage(message));
-  if (process.env.NODE_ENV !== 'production') {
+  const formatted = formatMessage(message);
+  if (!isServerless && logFile) {
+    fs.appendFileSync(logFile, formatted);
+  }
+  if (process.env.NODE_ENV !== 'production' || isServerless) {
     console.log(`📘 APP: ${message}`);
   }
 }
 
 function logError(error) {
   const msg = error instanceof Error ? error.stack || error.message : error;
-  fs.appendFileSync(errorFile, formatMessage(msg));
+  const formatted = formatMessage(msg);
+  if (!isServerless && errorFile) {
+    fs.appendFileSync(errorFile, formatted);
+  }
   console.error(`❌ ERROR: ${msg}`);
 }
 
 function logSecurity(event) {
-  fs.appendFileSync(securityFile, formatMessage(event));
+  const formatted = formatMessage(event);
+  if (!isServerless && securityFile) {
+    fs.appendFileSync(securityFile, formatted);
+  }
   console.warn(`🔐 SECURITY: ${event}`);
 }
 

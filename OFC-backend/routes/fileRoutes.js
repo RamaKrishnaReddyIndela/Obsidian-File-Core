@@ -3,7 +3,6 @@ const router = express.Router();
 const multer = require("multer");
 const fs = require("fs");
 const path = require("path");
-const os = require("os"); // <--- Added here
 const jwt = require("jsonwebtoken");
 
 const File = require("../models/File");
@@ -19,11 +18,9 @@ const { analyzeSensitivity } = require("../ai/sensitivityAnalyzer");
 const { analyzeFile: detectThreats } = require("../ai/threatDetectionService");
 const { calculateRiskLevel } = require("../services/riskService");
 
-// Directories - using OS temp directory to ensure write permission in all environments
-const uploadDir = path.join(os.tmpdir(), "uploads");
-const encryptedDir = path.join(os.tmpdir(), "encrypted");
-
-// Ensure directories exist
+// Directories
+const uploadDir = path.join(__dirname, "..", "uploads");
+const encryptedDir = path.join(__dirname, "..", "encrypted");
 if (!fs.existsSync(uploadDir)) fs.mkdirSync(uploadDir, { recursive: true });
 if (!fs.existsSync(encryptedDir)) fs.mkdirSync(encryptedDir, { recursive: true });
 
@@ -84,7 +81,6 @@ router.post("/upload", verifyToken, upload.single("file"), async (req, res) => {
       riskLevel,
     });
 
-    // Clean up the original uploaded file (unencrypted)
     if (fs.existsSync(req.file.path)) fs.unlinkSync(req.file.path);
 
     // Blockchain record
@@ -153,6 +149,7 @@ router.post("/generate-temp-link", verifyToken, async (req, res) => {
 
     const token = jwt.sign({ fileId: file._id }, process.env.JWT_SECRET, { expiresIn: "5m" });
 
+    // Force backend absolute link
     const backendURL = process.env.BACKEND_URL || "http://localhost:5000";
     const link = `${backendURL}/api/file/secure-download/${file._id}?token=${token}`;
 
@@ -174,6 +171,7 @@ router.post("/generate-encrypted-temp-link", verifyToken, async (req, res) => {
 
     const token = jwt.sign({ fileId: file._id }, process.env.JWT_SECRET, { expiresIn: "5m" });
 
+    // Force backend absolute link
     const backendURL = process.env.BACKEND_URL || "http://localhost:5000";
     const link = `${backendURL}/api/file/secure-download-encrypted/${file._id}?token=${token}`;
 
@@ -199,7 +197,8 @@ router.get("/secure-download/:id", async (req, res) => {
       return res.status(404).json({ message: "Encrypted file missing" });
 
     const tempDecryptedPath = path.join(
-      os.tmpdir(),
+      __dirname,
+      "..",
       `decrypted_${Date.now()}_${file.originalName}`
     );
 

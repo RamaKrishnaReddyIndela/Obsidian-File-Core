@@ -4,11 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const algorithm = 'aes-256-cbc';
-const isServerless = !!process.env.VERCEL;
-
-const encryptedDir = isServerless
-  ? path.join('/tmp', 'encrypted')
-  : path.join(__dirname, '..', 'encrypted');
+const encryptedDir = path.join(__dirname, '..', 'encrypted');
 
 // Make sure encrypted directory exists
 if (!fs.existsSync(encryptedDir)) {
@@ -106,10 +102,4 @@ function hexToKey(hexString) {
   return Buffer.from(hexString, 'hex');
 }
 
-module.exports = {
-  encryptFile,
-  decryptFile,
-  sanitizeFileName,
-  hexToKey,
-  encryptedDir, // optionally export for use elsewhere
-};
+module.exports = { encryptFile, decryptFile, sanitizeFileName, hexToKey };

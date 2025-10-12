@@ -101,7 +101,10 @@ if (!fs.existsSync(mlTmpDir)) {
 
 // ===== Start Server =====
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
-  log(`Server started on http://localhost:${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`🚀 Server running on http://localhost:${PORT}`);
+//   log(`Server started on http://localhost:${PORT}`);
+// });
+
+module.exports = app;
+
